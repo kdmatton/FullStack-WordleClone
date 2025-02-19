@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgba(181, 87, 87, 0.7), rgba(239, 159, 159, 0.7)), 
+              url('https://source.unsplash.com/1600x900/?nature,city'); 
+  background-size: cover; 
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* Welcome to wordle */
+.glass-header {
+  background: rgba(172, 108, 108, 0.9);
+  border-radius: 12px;
+  padding: 15px 30px;
+  text-align: center;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: auto;
+}
+
+/* Main container */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: bottom;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+  margin-top: 100px; 
+}
+
+/* Guess container - Centers the guesses */
+.guesses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+/* Guess row */
+.guess-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Letter and input appearance */
+.letter,
+.guess-input {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000000;
+  margin: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: rgb(255, 241, 241);
+}
+
+.guess-input {
+  border-color: #000000;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Letters user gets right or atleast present */
+.letter.correct {
+  background-color: #6aaa64;
+  color: white;
+}
+
+.letter.present {
+  background-color: #c9b458;
+  color: white;
+}
+
+/* Buttons */
+.start-button,
+.submit-button {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  margin-top: 70px;
+  align-items: center;
+}
+
+.start-button {
+  background: linear-gradient(to right, #3e0202, #9c2b05);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover {
+  background: linear-gradient(to right, #231137, #551601);
+  transform: scale(1.05);
+}
+
+.submit-button {
+  color: white;
+  background: linear-gradient(to right, #226315, #055428);
+  margin-top: 5px;
+  margin-left: 96px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+  background-color: #3c8e40;
+  transform: scale(1.05);
+}
+
+/* Messages After user wins or loses */
+.success-message,
+.failure-message {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
